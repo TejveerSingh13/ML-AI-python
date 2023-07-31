@@ -1,0 +1,2 @@
+changes in numpy slices also changes the origanl array of which the slice is.
+read about the numpt axis parameter used to find sum accross a specific axis.
