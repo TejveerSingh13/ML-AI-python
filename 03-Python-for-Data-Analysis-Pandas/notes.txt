@@ -1,6 +1,0 @@
-# SERIES
-index array with custome labels. fixed size and cant be changed and sabe functions and any objects.
-
-# Dataframe
-list or collection of series. [['W']] return a dataframe/s column and ['W'] returns a series column.
-learn abour importance of axis 
