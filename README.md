@@ -2,6 +2,7 @@
 The Repository will act as a Pathway that i will be following to get myself introduced and comfortable with ML and AI concepts.
 
 # Basics Notes
+Some steps usefull -> load data. check columns, info, draw snspairplots for smaller data, check distributions ,find correlation and heat map and look for correlation with the variable we want to predict or is dependent.
 
 # Learning process for a ML Model - 
 
@@ -47,3 +48,8 @@ Algo trained using labeled examples. Inputs where the desired results are known.
 used against data that has no historical labels. System not tols the right answers, goal is to explor the data and find some structure within. 
 
 **METHODS like** self-organizing maps, neareast-neighbou mapping, k-means clustering and singular value decompositon.
+
+# Models and Projects
+## 1. Linear Regression
+### Tips
+After fitting the data, check intercepts and coeficient. To analyse we can make a dataframe for each column and its coefficient .from which we can remove some relationship. We can now predict values to see the output data and then we can compare it with the Y_test or actual predicted value by plotting a histogram of the resuidals. The histogram should show a normal distribution if the model choice is right.
