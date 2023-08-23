@@ -26,7 +26,7 @@ In classification the model can be either correct or incorrect
 * **Accuracy -** number of correct prediction / number of total prediction. USeful when the target classess are well balanced(50-50 in case of binary classification).
 ### -> For unbalanced data set we go for recall and precision.
 * **Recall -** number of true positives/number of true positives + false negatives. ability of a model to find ALL RELEVENT cases within a dataset.  
-* **Precision -** number of true positives/number of true positives + false positives. ability of a model to find ONLY THE RELEVENT data points. **Expresses the poropotion of the data points our model says was relevent actually were relevent.
+* **Precision -** number of true positives/number of true positives + false positives. ability of a model to find ONLY THE RELEVENT data points. ** Expresses the poropotion of the data points our model says was relevent actually were relevent.
 * **F1 Score -** combination of both precision and recall. Harmonic mean?? of precision and recall: 2* (precision*recall)/(precision+recall)
 
 # Evaluating Performance - Regression
@@ -52,4 +52,12 @@ used against data that has no historical labels. System not tols the right answe
 # Models and Projects
 ## 1. Linear Regression
 ### Tips
-After fitting the data, check intercepts and coeficient. To analyse we can make a dataframe for each column and its coefficient .from which we can remove some relationship. We can now predict values to see the output data and then we can compare it with the Y_test or actual predicted value by plotting a histogram of the resuidals. The histogram should show a normal distribution if the model choice is right.
+Load data, check head, check info() and describe().
+Draw plots, scatter, jointplot(seaborn), pairplot(between all features), distplay, heatmaps(IMP).
+After pairplot we can draw some conclusion on plots and feature with max correlation and we can plot linear plot to find out.
+
+Now, split the data fram 1. drop all non numerical column 2. Y= dependent feature 3. X= all other independent feature.
+After split, make test train split and then import the model.
+Once the model is fit we can check the coefficient to see if out plot conclusion is correct.
+
+After fitting the data, check intercepts and coeficient. To analyse we can make a dataframe for each column and its coefficient .from which we can remove some relationship. We can now predict values to see the output data and then we can compare it with the Y_test or actual predicted value by plotting a histogram of the resuidals. The histogram should show a normal distribution if the model choice is right. Another better method to see if LR is the correct model is to plot residual VS actual y values. <- the last one is usefull in multiple independent variable dataset i.e. multiple x values/ features.
