@@ -12,6 +12,8 @@ High-variance models tend to overfit the training data, meaning they fit the noi
 
 **Regularization** is a technique used in machine learning to prevent overfitting by adding a penalty term to the model's objective function. It helps to control the complexity of a model and prevents it from fitting the noise in the training data. Regularization is particularly useful when dealing with high-dimensional data or when there are many features in the model. 3 types L1, L2 and Elastic(L1+L2).
 
+**Cross-Validation** ??
+
 ## Feature Scaling:
 - **Standardization-** scaling the data so that it has a mean of 0 and SD of 1.
 - **Normalization-** Rescale values between 0 and 1.
@@ -78,4 +80,4 @@ After fitting the data, check intercepts and coeficient. To analyse we can make 
 ## 2. Polynomial Regression 
 ### Tips
 We can the Polynomial regression model and fit and transform the data. By transform we make combination and see polynomial relationship of independent varibales with self and each other by specifying the degree.
-One way to find out what degree perform well is that we train the model for different degree and then we plot the predicted vs real y values against the degree. 
+One way to find out what degree perform well is that we train the model for different degree and then we plot the RMSE for train and test y values against the degree. 
