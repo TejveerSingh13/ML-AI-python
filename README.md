@@ -4,6 +4,21 @@ The Repository will act as a Pathway that i will be following to get myself intr
 # Basics Notes
 Some steps usefull -> load data. check columns, info, draw snspairplots for smaller data, check distributions ,find correlation and heat map and look for correlation with the variable we want to predict or is dependent.
 
+## Bias Varience and Regularization:
+Bias-Varience tells us if or a model is underfit or overfit. **Bias** refers to the error introduced by approximating a real-world problem, which may be extremely complicated, by a simplified model. A high-bias model is one that oversimplifies the problem and misses the underlying patterns in the data. This can lead to systematic errors consistently deviating predictions from the true values.
+**Variance** refers to the model's sensitivity to small fluctuations in the training data.
+A high-variance model captures random noise in the training data and does not generalize well to new, unseen data.
+High-variance models tend to overfit the training data, meaning they fit the noise in the data instead of the underlying patterns.
+
+**Regularization** is a technique used in machine learning to prevent overfitting by adding a penalty term to the model's objective function. It helps to control the complexity of a model and prevents it from fitting the noise in the training data. Regularization is particularly useful when dealing with high-dimensional data or when there are many features in the model. 3 types L1, L2 and Elastic(L1+L2).
+
+**Cross-Validation** ??
+
+## Feature Scaling:
+- **Standardization-** scaling the data so that it has a mean of 0 and SD of 1.
+- **Normalization-** Rescale values between 0 and 1.
+**Feature scaling is done only to training data and not the complete data set!**
+
 # Learning process for a ML Model - 
 
 **get data -> clean data -> divide data from training, validation and testing -> modle training and building-> model testing -> model deployment.**
@@ -61,3 +76,8 @@ After split, make test train split and then import the model.
 Once the model is fit we can check the coefficient to see if out plot conclusion is correct.
 
 After fitting the data, check intercepts and coeficient. To analyse we can make a dataframe for each column and its coefficient .from which we can remove some relationship. We can now predict values to see the output data and then we can compare it with the Y_test or actual predicted value by plotting a histogram of the resuidals. The histogram should show a normal distribution if the model choice is right. Another better method to see if LR is the correct model is to plot residual VS actual y values. <- the last one is usefull in multiple independent variable dataset i.e. multiple x values/ features.
+
+## 2. Polynomial Regression 
+### Tips
+We can the Polynomial regression model and fit and transform the data. By transform we make combination and see polynomial relationship of independent varibales with self and each other by specifying the degree.
+One way to find out what degree perform well is that we train the model for different degree and then we plot the RMSE for train and test y values against the degree. 
