@@ -26,7 +26,7 @@ Goal is to reduce over fitting of the model by adding an extra panelty term whic
 Lasso might actually make some of the coefficient zero for a large enough $`\alpha`${according to skilearn}/ $`\lambda`$ value. This makes the model more simpler. Also its not necessary it will make the model better then L2 always!
   - **IMPORTANT IN L1** - While training, take care of eps, n_alpha, cv, max_inter parameters
 
-**Cross-Validation** ??
+**Cross-Validation** : is usually done K-folds and is a cycle of train and validate unitl the model is trained on the entire training data set. check GridSearch() and normal methods with CV.
 
 ## Feature Scaling:
 - **Standardization-** scaling the data so that it has a mean of 0 and SD of 1.
@@ -54,7 +54,7 @@ In classification the model can be either correct or incorrect
 ## Different Evalution Parameters:
 * **Accuracy -** number of correct prediction / number of total prediction. USeful when the target classess are well balanced(50-50 in case of binary classification).
 ### -> For unbalanced data set we go for recall and precision.
-* **Recall -** number of true positives/number of true positives + false negatives. ability of a model to find ALL RELEVENT cases within a dataset.  
+* **Recall -** (Sensitiivity) number of true positives/number of true positives + false negatives. ability of a model to find ALL RELEVENT cases within a dataset.  
 * **Precision -** number of true positives/number of true positives + false positives. ability of a model to find ONLY THE RELEVENT data points. ** Expresses the poropotion of the data points our model says was relevent actually were relevent.
 * **F1 Score -** combination of both precision and recall. Harmonic mean?? of precision and recall: 2* (precision*recall)/(precision+recall)
 
@@ -79,8 +79,9 @@ used against data that has no historical labels. System not tols the right answe
 **METHODS like** self-organizing maps, neareast-neighbou mapping, k-means clustering and singular value decompositon.
 
 # Models and Projects
-## 1. Linear Regression
-### Tips
+## Regression
+### 1.1. Linear Regression
+#### Tips
 Load data, check head, check info() and describe().
 Draw plots, scatter, jointplot(seaborn), pairplot(between all features), distplay, heatmaps(IMP).
 After pairplot we can draw some conclusion on plots and feature with max correlation and we can plot linear plot to find out.
@@ -91,7 +92,14 @@ Once the model is fit we can check the coefficient to see if out plot conclusion
 
 After fitting the data, check intercepts and coeficient. To analyse we can make a dataframe for each column and its coefficient .from which we can remove some relationship. We can now predict values to see the output data and then we can compare it with the Y_test or actual predicted value by plotting a histogram of the resuidals. The histogram should show a normal distribution if the model choice is right. Another better method to see if LR is the correct model is to plot residual VS actual y values. <- the last one is usefull in multiple independent variable dataset i.e. multiple x values/ features.
 
-## 2. Polynomial Regression 
-### Tips
+### 1.2. Polynomial Regression 
+#### Tips
 We can the Polynomial regression model and fit and transform the data. Only the independent variables (X) are fit_transfrorm. By transform we make combination and see polynomial relationship of independent varibales with self and each other by specifying the degree.
-One way to find out what degree perform well is that we train the model for different degree and then we plot the RMSE for train and test y values against the degree. 
+One way to find out what degree perform well is that we train the model for different degree and then we plot the RMSE for train and test y values against the degree.  
+## Logistic Regression  
+Even though the name says regression it is a classification. Linear regressions are converted to Logistic by converting continous targets into catagorial through **Discretization**  
+Classification algorithms - along with classification provides probabilistic data eg. probability od data being in a specific catagory.  
+Error metrics of linear regression wont be useful here
+
+- **Logistic Function** - A function we can say that maps all the values of x (+ || -) between 0 and 1.
+In linear regression the fitting of curve was done using square of resuidal sum but in logistic similar cannot be done, so , we use a concept named maximum likelihood. 
