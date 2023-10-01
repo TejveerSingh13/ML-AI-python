@@ -101,5 +101,10 @@ Even though the name says regression it is a classification. Linear regressions 
 Classification algorithms - along with classification provides probabilistic data eg. probability od data being in a specific catagory.  
 Error metrics of linear regression wont be useful here
 
-- **Logistic Function** - A function we can say that maps all the values of x (+ || -) between 0 and 1.
-In linear regression the fitting of curve was done using square of resuidal sum but in logistic similar cannot be done, so , we use a concept named maximum likelihood. 
+- **Logistic Function** - A function we can say that maps all the values of x (+ || -) between 0 and 1.  
+In linear regression the fitting of curve was done using square of resuidal sum but in logistic similar cannot be done, so , we use a concept named maximum likelihood.
+It is binary classification. At the end we can find the probablity or likelyhood of a data being in a said class or not. Accoeding to my understanding why it is called regression is because 1. its being supervised learning, 2. converting continous independent variable into a binary probablity.
+
+## KNN (K-Neareast Neighbour)  
+Again mostly used for classification, performs poorly in regression models. Intitution is it selects the class to which majority of the points it is near to. In case of a tie in majority point there are various ways to break the tie. Sckit learn slects the first class near to it in case of tie.  
+Scaling the data is neceassary and a goood idea when having multiple feature since distace can be more in one feature and less in another may create a bias.
