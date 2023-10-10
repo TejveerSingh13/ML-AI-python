@@ -108,3 +108,7 @@ It is binary classification. At the end we can find the probablity or likelyhood
 ## KNN (K-Neareast Neighbour)  
 Again mostly used for classification, performs poorly in regression models. Intitution is it selects the class to which majority of the points it is near to. In case of a tie in majority point there are various ways to break the tie. Sckit learn slects the first class near to it in case of tie.  
 Scaling the data is neceassary and a goood idea when having multiple feature since distace can be more in one feature and less in another may create a bias.
+
+## K-Means Clustering  
+Basically we initialize a "K" i.e. number of clusters we want. Then we randomly select "k" cluster point in data set and then assign points to these cluster point on the basis of nearest distance to them. Then we take avg of each cluster and set the new cluster points to these averages and we repeat the above process again so then we get the proper cluster formation.  
+One way to find the vule for K is using elbow method(From what i understood is visually plotting the graph for the error metrics and choosing a point where it flats out "creating an elbow") and the error metrics here would be Sum of Squared Error (SSE) which is sum of squared distances of each point in the cluster to its centroid.  
