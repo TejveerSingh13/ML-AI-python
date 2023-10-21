@@ -114,6 +114,15 @@ Basically we initialize a "K" i.e. number of clusters we want. Then we randomly 
 One way to find the vule for K is using elbow method(From what i understood is visually plotting the graph for the error metrics and choosing a point where it flats out "creating an elbow") and the error metrics here would be Sum of Squared Error (SSE) which is sum of squared distances of each point in the cluster to its centroid.  
 
 ## Hierarichal Clustering  
-We dont have to specify anynumber of clustering in the beginning. It visualizes on own whihc will then help us to decide number of cluster. 2 approches -> 
+We dont have to specify anynumber of clustering in the beginning. It visualizes on own which will then help us to decide number of cluster. 2 approches -> 
 - i - Agglomerative Approch: each point begain as own cluster and then joined together
 - ii - Divisive Approch: everything as one cluster and then divided into individual clusters
+
+## SVM - Support Vector Mechine  
+Hyperplane(it is a flat plane that is a (N-1) dimension in a N dimentional space) to create a seperation between classess.  
+A **Maximal Margin Classifier** is a seperator eg a hyperplane that maximizes a margin between different classess. 
+A **Support Vector Classifier/Soft Margins** allowing miss classification within the margins to get an over all good classification model **<- Concept still not clear?**
+There is stilla cases where our above two models will fail, what if there exist no hyper plane which cannot seperate our classess ? there here we sill use SVM and how that is achieved is using kernels.  
+**Kernals** are used to project our points to a higher dimantion where it can be then seperated by a hyperplane. To avoid this expensive computation we use something knwon as Kernel Trick.  
+In kernel trick we use Dot Product **(similarity)** a . b = |a||b|cos(@)  
+Can use gridSearchCV for various values of C <- Soft Boundry and Gamma <- for kernal trick  
