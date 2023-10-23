@@ -126,3 +126,12 @@ There is stilla cases where our above two models will fail, what if there exist 
 **Kernals** are used to project our points to a higher dimantion where it can be then seperated by a hyperplane. To avoid this expensive computation we use something knwon as Kernel Trick.  
 In kernel trick we use Dot Product **(similarity)** a . b = |a||b|cos(@)  
 Can use gridSearchCV for various values of C <- Soft Boundry and Gamma <- for kernal trick  
+
+## Naive Bayes and NLP
+It follows the Bayes expresssion in probablity where A and B are events : $` P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} `$
+​in NLP there is somthing knwo as count vectorization i.e. counting the occurance of each word in a given class.
+### Feature Extraction from Text  
+2 methods :  
+- **Count Vectorization** : Vocubulary of all the words used in all documents and then create a Document Term Matrix **(DTM)** ~similar to; just for example! how we create hot encoded values columns. Treats every word as a feature with their frequency count as a strength of the feature/words.
+- **TF-IDF** (Term Frequency-Incerse Document Frequency) : TF-IDF is used to solve the problem that can be casued by the above method. IDf includes the occurance of term in each document too. tf is simple it is the count of the term is is multipled by idf which is calculated by total no of documents divded by the number of documents that countains a word and calculating the logarithm.
+
