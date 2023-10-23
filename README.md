@@ -108,3 +108,30 @@ It is binary classification. At the end we can find the probablity or likelyhood
 ## KNN (K-Neareast Neighbour)  
 Again mostly used for classification, performs poorly in regression models. Intitution is it selects the class to which majority of the points it is near to. In case of a tie in majority point there are various ways to break the tie. Sckit learn slects the first class near to it in case of tie.  
 Scaling the data is neceassary and a goood idea when having multiple feature since distace can be more in one feature and less in another may create a bias.
+
+## K-Means Clustering  
+Basically we initialize a "K" i.e. number of clusters we want. Then we randomly select "k" cluster point in data set and then assign points to these cluster point on the basis of nearest distance to them. Then we take avg of each cluster and set the new cluster points to these averages and we repeat the above process again so then we get the proper cluster formation.  
+One way to find the vule for K is using elbow method(From what i understood is visually plotting the graph for the error metrics and choosing a point where it flats out "creating an elbow") and the error metrics here would be Sum of Squared Error (SSE) which is sum of squared distances of each point in the cluster to its centroid.  
+
+## Hierarichal Clustering  
+We dont have to specify anynumber of clustering in the beginning. It visualizes on own which will then help us to decide number of cluster. 2 approches -> 
+- i - Agglomerative Approch: each point begain as own cluster and then joined together
+- ii - Divisive Approch: everything as one cluster and then divided into individual clusters
+
+## SVM - Support Vector Mechine  
+Hyperplane(it is a flat plane that is a (N-1) dimension in a N dimentional space) to create a seperation between classess.  
+A **Maximal Margin Classifier** is a seperator eg a hyperplane that maximizes a margin between different classess. 
+A **Support Vector Classifier/Soft Margins** allowing miss classification within the margins to get an over all good classification model **<- Concept still not clear?**
+There is stilla cases where our above two models will fail, what if there exist no hyper plane which cannot seperate our classess ? there here we sill use SVM and how that is achieved is using kernels.  
+**Kernals** are used to project our points to a higher dimantion where it can be then seperated by a hyperplane. To avoid this expensive computation we use something knwon as Kernel Trick.  
+In kernel trick we use Dot Product **(similarity)** a . b = |a||b|cos(@)  
+Can use gridSearchCV for various values of C <- Soft Boundry and Gamma <- for kernal trick  
+
+## Naive Bayes and NLP
+It follows the Bayes expresssion in probablity where A and B are events : $` P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} `$
+​in NLP there is somthing knwo as count vectorization i.e. counting the occurance of each word in a given class.
+### Feature Extraction from Text  
+2 methods :  
+- **Count Vectorization** : Vocubulary of all the words used in all documents and then create a Document Term Matrix **(DTM)** ~similar to; just for example! how we create hot encoded values columns. Treats every word as a feature with their frequency count as a strength of the feature/words.
+- **TF-IDF** (Term Frequency-Incerse Document Frequency) : TF-IDF is used to solve the problem that can be casued by the above method. IDf includes the occurance of term in each document too. tf is simple it is the count of the term is is multipled by idf which is calculated by total no of documents divded by the number of documents that countains a word and calculating the logarithm.
+
