@@ -1,4 +1,4 @@
-# ML-AI-python
+ # ML-AI-python
 The Repository will act as a Pathway that i will be following to get myself introduced and comfortable with ML and AI concepts.
 
 # Basics Notes
@@ -115,8 +115,13 @@ One way to find the vule for K is using elbow method(From what i understood is v
 
 ## Hierarichal Clustering  
 We dont have to specify anynumber of clustering in the beginning. It visualizes on own which will then help us to decide number of cluster. 2 approches -> 
-- i - Agglomerative Approch: each point begain as own cluster and then joined together
-- ii - Divisive Approch: everything as one cluster and then divided into individual clusters
+- i - **Agglomerative Approch:** each point begain as own cluster and then joined together  
+In the above approch the main question is how do we measure proximity/distance/similarity between two clusters? there are 4 possible ways
+  1. MIN(Single Linkage) : Distance b/w closest point for two cluster
+  2. MAX(Complete Linkage) : Distance b/w farthest point for two cluster
+  3. Group Average : Avg distance of all the points in both clusters
+  4. Distance Between centroids : Distance b/w centroids of two cluster  
+- ii - **Divisive Approch:** everything as one cluster and then divided into individual clusters
 
 ## SVM - Support Vector Mechine  
 Hyperplane(it is a flat plane that is a (N-1) dimension in a N dimentional space) to create a seperation between classess.  
@@ -128,10 +133,10 @@ In kernel trick we use Dot Product **(similarity)** a . b = |a||b|cos(@)
 Can use gridSearchCV for various values of C <- Soft Boundry and Gamma <- for kernal trick  
 
 ## Naive Bayes and NLP
-It follows the Bayes expresssion in probablity where A and B are events : $` P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} `$
-​in NLP there is somthing knwo as count vectorization i.e. counting the occurance of each word in a given class.
+It follows the Bayes expresssion in probablity where A and B are events : $` P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} `$  
+​NB is mostly used in NLP. In NLP there is somthing known as count vectorization i.e. counting the occurance of each word in a given class.
 ### Feature Extraction from Text  
 2 methods :  
-- **Count Vectorization** : Vocubulary of all the words used in all documents and then create a Document Term Matrix **(DTM)** ~similar to; just for example! how we create hot encoded values columns. Treats every word as a feature with their frequency count as a strength of the feature/words.
+- **Count Vectorization** : Vocubulary of all the words used in all documents and then create a Document Term Matrix **(DTM)** ~similar to; just for example! how we create hot encoded values columns. Treats every word as a feature with their frequency count as a strength of the feature/words. This leads to ab problem where frequebcy of any word is zero and it leads to the probablity of a new the new word to be classified to be wrongly assigned to another class. One solution to solve this would be adding one in all the count vectors so tha we have no 0 left and another method is mentioned below.  
 - **TF-IDF** (Term Frequency-Incerse Document Frequency) : TF-IDF is used to solve the problem that can be casued by the above method. IDf includes the occurance of term in each document too. tf is simple it is the count of the term is is multipled by idf which is calculated by total no of documents divded by the number of documents that countains a word and calculating the logarithm.
 
