@@ -131,6 +131,7 @@ There is stilla cases where our above two models will fail, what if there exist 
 **Kernals** are used to project our points to a higher dimantion where it can be then seperated by a hyperplane. To avoid this expensive computation we use something knwon as Kernel Trick.  
 In kernel trick we use Dot Product **(similarity)** a . b = |a||b|cos(@)  
 Can use gridSearchCV for various values of C <- Soft Boundry and Gamma <- for kernal trick  
+**SVM most fo the time do NEEED grid search to find the best parameter!!**
 
 ## Naive Bayes and NLP
 It follows the Bayes expresssion in probablity where A and B are events : $` P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} `$  
