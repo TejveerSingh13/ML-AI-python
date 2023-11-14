@@ -142,7 +142,7 @@ It follows the Bayes expresssion in probablity where A and B are events : $` P(A
 - **TF-IDF** (Term Frequency-Incerse Document Frequency) : TF-IDF is used to solve the problem that can be casued by the above method. IDf includes the occurance of term in each document too. tf is simple it is the count of the term is is multipled by idf which is calculated by total no of documents divded by the number of documents that countains a word and calculating the logarithm.
 
 ## Trees
-The splitting cretria in a tree is also known as information gain.
+The splitting cretria in a tree is also known as information gain.entropy and information gain are the mathematical methods of choosing the best split.
 ### 1. Decision Tree
 Pruninig : a method to shorten the leaf to avoid over fitting.  
 **Gini impurity**- Mathematical measurement of how "pure" the information in a data set is. By pure it means the data containing more data for a specific class. eg red and blue data the less red and more blue means the data is more pure wrt to blue data. We use gini impurity in decision tree to minimize gini impurity / maximize gini purity at the leaf node. <- **IMPORTANT!!**  
@@ -150,10 +150,11 @@ We dont scale the data before spliting in case of decision tree classification.
 Prone to over fitting.  
 
 ### 2. Random Forest
-Working with multiple decision tree. 
+Working with multiple decision tree. from a feature set N, every time m samples (m <= N) are chosen at random and a split is made from those m samples. 
 
 ## Boosting Methods
 Boosting is also known as a meta learning algorithm since it can be applied to any learnign model. But commonly applied to decision trees. Its a method and not an model on its own. Aggregative a bunch of weak model into an ensemble model. BOosting is also known as an optimizing algorithm on top of a cost function.
 ### 1. AdaBoosting (Adaptive)  
-Creating ensemble of multiple weak model. In case of a decision tree creating multiple stump (i.e. a node with two leafs). Trees are built in series. 
-### 2. Gradient Boosting
+Creating ensemble of multiple weak model. In case of a decision tree creating multiple stump (i.e. a node with two leafs). Trees are built in series. Why Series? basically its how the alpha or weights are propogated. 
+### 2. Gradient Boosting  
+Similar to adaboost but ise resuidal error for learning. Difference from Adaboost - Larger trees are allowed, learning coeffiecent same for all weak learners, training on resuidal of the previosu model. for classification we use **logit?** function to get the error.
